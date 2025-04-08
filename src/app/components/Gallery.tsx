@@ -13,7 +13,7 @@ const Gallery = ({ images }: GalleryProps) => {
         key={id}
         className="m-1 flex justify-center max-w-[200px] sm:max-w-[300px] "
       >
-        <Image key={id} src={`${link}`} alt={name} width={300} height={200} />
+        <Image key={id} src={link} alt={name} width={300} height={200} />
       </div>
     );
   });

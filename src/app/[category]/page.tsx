@@ -7,6 +7,10 @@ type CategoryParams = {
   }>;
 };
 
+export function generateStaticParams() {
+  return [{ category: "vegan" }, { id: "vegetarian" }];
+}
+
 export default async function Category({ params }: CategoryParams) {
   const { category } = await params;
 

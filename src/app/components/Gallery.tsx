@@ -8,7 +8,7 @@ type GalleryProps = {
 const Gallery = ({ images }: GalleryProps) => {
   const gallery = images.map(async (image: FoodData) => {
     const { id, name, link } = image;
-    const img = await import(`/public/${link}`);
+    const img = `/${link}`;
     return (
       <div
         key={id}

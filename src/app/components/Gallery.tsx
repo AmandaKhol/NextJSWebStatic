@@ -8,13 +8,12 @@ type GalleryProps = {
 const Gallery = ({ images }: GalleryProps) => {
   const gallery = images.map(async (image: FoodData) => {
     const { id, name, link } = image;
-    const img = `/${link}`;
     return (
       <div
         key={id}
         className="m-1 flex justify-center max-w-[200px] sm:max-w-[300px] "
       >
-        <Image key={id} src={img} alt={name} width={300} height={200} />
+        <Image key={id} src={`${link}`} alt={name} width={300} height={200} />
       </div>
     );
   });

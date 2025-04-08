@@ -14,6 +14,7 @@ export async function generateStaticParams() {
     category,
   }));
 }
+
 export default async function Category({ params }: CategoryParams) {
   const { category } = await params;
 

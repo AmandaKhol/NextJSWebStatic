@@ -30,9 +30,26 @@ const NavBar = () => {
             pathname === PagesName.vegan ? "underline underline-offset-8" : ""
           } `}
         >
-          vegan
+          Vegan
         </Link>
-        <p>Vegetarian</p>
+        <Link
+          href={PagesName.vegetarian}
+          className={`text-lg sm:text-xl ${
+            pathname === PagesName.vegetarian
+              ? "underline underline-offset-8"
+              : ""
+          } `}
+        >
+          Vegetarian
+        </Link>
+        <Link
+          href={PagesName.about}
+          className={`text-lg sm:text-xl ${
+            pathname === PagesName.about ? "underline underline-offset-8" : ""
+          } `}
+        >
+          About
+        </Link>
       </div>
     </div>
   );

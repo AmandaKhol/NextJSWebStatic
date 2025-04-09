@@ -1,5 +1,6 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { Dispatch, SetStateAction, useState } from "react";
 
 export const LegalModalComponent = ({
@@ -7,6 +8,7 @@ export const LegalModalComponent = ({
 }: {
   setShowLegalModal: Dispatch<SetStateAction<boolean>>;
 }) => {
+  const t = useTranslations("legal");
   return (
     <div
       className={`fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 
@@ -24,10 +26,10 @@ export const LegalModalComponent = ({
         </button>
         <div className="mt-2 overflow-y-auto w-full">
           <h2 className="text-center uppercase font-bold mb-3 text-xl">
-            Legal title
+            {t("main_title")}
           </h2>
-          <h3 className="my-2 font-bold text-base">legal</h3>
-          <p className="text-sm text-justify">Description</p>
+          <h3 className="my-2 font-bold text-base">{t("title_1")}</h3>
+          <p className="text-sm text-justify">{t("description_1")}</p>
         </div>
       </div>
     </div>

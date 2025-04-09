@@ -4,6 +4,8 @@ import Image from "next/image";
 import logo from "../../../../public/logo_small.jpg";
 import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
+import LocalSwitcherSelect from "./LocalSwitcherSelect";
+import { useTranslations } from "next-intl";
 
 export enum PagesName {
   main = "/",
@@ -15,8 +17,10 @@ export enum PagesName {
 
 const NavBar = () => {
   const pathname = usePathname();
+  const t = useTranslations("header");
   return (
     <div className="w-full min-h-[50px] sm:min-h-[100px] flex flex-col justify-center items-center">
+      <LocalSwitcherSelect />
       <div className="max-w-[130px] sm:max-w-[150px] mt-5">
         <Link href={PagesName.main}>
           <Image src={logo} alt="logo" />
@@ -30,7 +34,7 @@ const NavBar = () => {
             pathname === PagesName.vegan ? "underline underline-offset-8" : ""
           } `}
         >
-          Vegan
+          {t("link2")}
         </Link>
         <Link
           href={PagesName.vegetarian}
@@ -40,7 +44,7 @@ const NavBar = () => {
               : ""
           } `}
         >
-          Vegetarian
+          {t("link3")}
         </Link>
         <Link
           href={PagesName.about}
@@ -48,7 +52,7 @@ const NavBar = () => {
             pathname === PagesName.about ? "underline underline-offset-8" : ""
           } `}
         >
-          About
+          {t("link1")}
         </Link>
       </div>
     </div>

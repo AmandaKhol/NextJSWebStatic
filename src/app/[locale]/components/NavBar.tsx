@@ -6,14 +6,7 @@ import { usePathname } from "next/navigation";
 import { Link } from "@/i18n/navigation";
 import LocalSwitcherSelect from "./LocalSwitcherSelect";
 import { useTranslations } from "next-intl";
-
-export enum PagesName {
-  main = "/",
-  about = "/about",
-  vegan = "/vegan",
-  vegetarian = "/vegetarian",
-  details = "/details",
-}
+import { PagesName } from "@/i18n/routing";
 
 const NavBar = () => {
   const pathname = usePathname();

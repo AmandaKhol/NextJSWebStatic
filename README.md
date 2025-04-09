@@ -1,1 +1,1 @@
-# basicBuild
+# NextJSWebStatic

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import logo from "../../../public/logo_small.jpg";
+import logo from "../../../../public/logo_small.jpg";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 

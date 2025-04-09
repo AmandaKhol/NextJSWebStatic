@@ -21,7 +21,10 @@ export const metadata: Metadata = {
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  const categories = ["vegan", "vegetarian"];
+  return routing.locales.flatMap((locale) =>
+    categories.map((category) => ({ locale, category }))
+  );
 }
 
 export default async function RootLayout({

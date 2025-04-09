@@ -24,15 +24,15 @@ const NavBar = () => {
       </div>
 
       <div className="flex justify-between space-x-4 my-5">
-        <Link
+        {/*      <Link
           href={PagesName.vegan}
           className={`text-lg sm:text-xl ${
             pathname === PagesName.vegan ? "underline underline-offset-8" : ""
           } `}
         >
           Vegan
-        </Link>
-        <Link
+        </Link> */}
+        {/*      <Link
           href={PagesName.vegetarian}
           className={`text-lg sm:text-xl ${
             pathname === PagesName.vegetarian
@@ -41,7 +41,7 @@ const NavBar = () => {
           } `}
         >
           Vegetarian
-        </Link>
+        </Link> */}
         <Link
           href={PagesName.about}
           className={`text-lg sm:text-xl ${

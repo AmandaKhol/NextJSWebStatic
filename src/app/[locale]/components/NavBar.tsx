@@ -3,7 +3,7 @@
 import Image from "next/image";
 import logo from "../../../../public/logo_small.jpg";
 import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 
 export enum PagesName {
   main = "/",

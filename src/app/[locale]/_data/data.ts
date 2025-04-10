@@ -1,3 +1,5 @@
+import { projectPath } from "../../../../next.config";
+
 enum FOOD_STATE {
   SOLD = "sold",
   AVAILABLE = "available",
@@ -28,7 +30,7 @@ export const foodData: FoodData[] = [
     id: 0,
     name: "salad",
     state: FOOD_STATE.SOLD,
-    link: "/NextJSWebStatic/vegan/salad.jpg",
+    link: `${projectPath}/vegan/salad.jpg`,
     categories: [FOOD_CATEGORIES.VEGAN],
     alergies: [ALERGIES.PEANUTS],
   },
@@ -36,7 +38,7 @@ export const foodData: FoodData[] = [
     id: 1,
     name: "sandwich with cheese",
     state: FOOD_STATE.SOLD,
-    link: "/NextJSWebStatic/vegetarian/sandwich_with_cheese.jpg",
+    link: `${projectPath}/vegetarian/sandwich_with_cheese.jpg`,
     categories: [FOOD_CATEGORIES.VEGETARIAN],
     alergies: [ALERGIES.SOY, ALERGIES.GLUTEN],
   },

@@ -3,9 +3,11 @@ import createNextIntlPlugin from "next-intl/plugin";
 
 const isProd = process.env.NODE_ENV === "production";
 
+export const projectPath = isProd ? "/NextJSWebStatic" : "";
+
 const nextConfig: NextConfig = {
-  basePath: isProd ? "/NextJSWebStatic" : "",
-  assetPrefix: isProd ? "/NextJSWebStatic" : "",
+  basePath: projectPath,
+  assetPrefix: projectPath,
   images: {
     unoptimized: true,
   },

@@ -13,9 +13,19 @@ const LocalSwitcherSelect = () => {
 
   return (
     <div className=" w-full flex justify-end space-x-2 text-sm sm:text-lg text-gray-500 pr-10 pt-5">
-      <button onClick={() => handleLocaleChange("es")}>ES</button>
+      <button
+        className="cursor-pointer"
+        onClick={() => handleLocaleChange("es")}
+      >
+        ES
+      </button>
       <span>/</span>
-      <button onClick={() => handleLocaleChange("en")}>EN</button>
+      <button
+        className="cursor-pointer"
+        onClick={() => handleLocaleChange("en")}
+      >
+        EN
+      </button>
     </div>
   );
 };
